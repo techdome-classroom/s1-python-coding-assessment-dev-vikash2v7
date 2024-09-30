@@ -26,6 +26,6 @@ class Solution:
                 # If we find a land cell ('L'), it means we've found a new island
                 if grid[i][j] == 'L':
                     island_count += 1  
-                    self.explore(grid, i, j)  # Explore the entire island to mark it as visited
+                    self.explore(grid, i, j)  
 
-        return island_count  # Return the total number of islands
+        return island_count  
