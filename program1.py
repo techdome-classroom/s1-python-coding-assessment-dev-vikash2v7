@@ -22,10 +22,10 @@ class Solution:
 
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                
+
                 # If we find a land cell ('L'), it means we've found a new island
                 if grid[i][j] == 'L':
-                    island_count += 1  # Increment the island count
+                    island_count += 1  
                     self.explore(grid, i, j)  # Explore the entire island to mark it as visited
 
         return island_count  # Return the total number of islands
