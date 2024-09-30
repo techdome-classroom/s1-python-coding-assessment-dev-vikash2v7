@@ -18,6 +18,8 @@ class Solution:
             return 0
 
         island_count = 0
+
+        
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j] == 'L':  # Found an unvisited landmass
