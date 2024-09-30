@@ -9,7 +9,6 @@ def decode_message( s: str, p: str) -> bool:
         # Base case: empty pattern matches empty message
         dp[0][0] = True
         
-        # Handle patterns starting with '*' that can match an empty message
         for i in range(1, p + 1):
                 if pattern[i - 1] == '*':
                 dp[i][0] = dp[i - 1][0]
