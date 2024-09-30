@@ -7,7 +7,7 @@ def decode_message(message: str, pattern: str) -> bool:
     # Create a 2D table (dp array) initialized with False values
     dp = [[False] * (message_len + 1) for _ in range(pattern_len + 1)]
     
-    # Base case: an empty pattern matches an empty message
+    # Base case
     dp[0][0] = True
     
     # Handle patterns that start with one or more '*' symbols
