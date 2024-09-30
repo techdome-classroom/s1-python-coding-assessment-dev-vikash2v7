@@ -1,6 +1,6 @@
 def decode_message( s: str, p: str) -> bool:
 
-         m, n = len(s), len(p)
+        m, n = len(s), len(p)
     
         # Create a 2D dp array with False values
         dp = [[False] * (m + 1) for _ in range(n + 1)]
