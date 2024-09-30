@@ -1,4 +1,5 @@
 def decode_message(message: str, pattern: str) -> bool:
+        
     # Get lengths of the message and the pattern
     message_len = len(message)
     pattern_len = len(pattern)
