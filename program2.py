@@ -11,7 +11,6 @@ def decode_message(message: str, pattern: str) -> bool:
     dp[0][0] = True
     
     # Handle patterns that start with one or more '*' symbols
-    # '*' can match an empty message, so we carry forward the match status
     for i in range(1, pattern_len + 1):
         if pattern[i - 1] == '*':
             dp[i][0] = dp[i - 1][0]
