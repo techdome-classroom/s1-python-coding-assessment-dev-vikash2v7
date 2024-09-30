@@ -15,7 +15,6 @@ class Solution:
 
 
     def getTotalIsles(self, grid: list[list[str]]) -> int:
-        # Edge case: If the grid is empty, there are no islands
         if not grid:
             return 0
 
