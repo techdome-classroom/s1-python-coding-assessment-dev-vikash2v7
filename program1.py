@@ -1,12 +1,10 @@
 class Solution:
     
-    # Helper function to explore all connected land cells ('L') starting from (i, j)
     def explore(self, grid, i, j):
-        # Check if we're out of bounds or in water ('W') and stop exploring if so
+        
         if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == 'W':
             return
 
-        # Mark the current land cell as visited by turning it into water
         grid[i][j] = 'W'
 
         # Explore the neighboring cells in all four directions (up, down, left, right)
@@ -15,7 +13,7 @@ class Solution:
         self.explore(grid, i, j + 1)  # right
         self.explore(grid, i, j - 1)  # left
 
-        
+
 
     def getTotalIsles(self, grid: list[list[str]]) -> int:
         # Edge case: If the grid is empty, there are no islands
