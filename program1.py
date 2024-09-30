@@ -15,7 +15,8 @@ class Solution:
         self.explore(grid, i, j + 1)  # right
         self.explore(grid, i, j - 1)  # left
 
-    # Main function to calculate the total number of distinct islands
+        
+
     def getTotalIsles(self, grid: list[list[str]]) -> int:
         # Edge case: If the grid is empty, there are no islands
         if not grid:
