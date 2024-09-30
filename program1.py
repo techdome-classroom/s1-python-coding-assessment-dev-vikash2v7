@@ -3,7 +3,7 @@ class Solution:
    
     def explore(grid, i, j):
         
-        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == 'W':
+        if i < 0 or i >= len(grid) or j < 0 or grid[i][j] == 'W' or j >= len(grid[0]) :
             return
 
         grid[i][j] = 'W'
