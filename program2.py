@@ -1,9 +1,7 @@
 def decode_message( s: str, p: str) -> bool:
 
-         # Get lengths of message and pattern
         m, p = len(message), len(pattern)
         
-        # Create a 2D dp array with False values
         dp = [[False] * (m + 1) for _ in range(p + 1)]
         
         # Base case: empty pattern matches empty message
