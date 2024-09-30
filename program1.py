@@ -18,11 +18,11 @@ class Solution:
         if not grid:
             return 0
 
-        island_count = 0  # Initialize the count of islands
+        island_count = 0  
 
-        # Loop through every cell in the grid
         for i in range(len(grid)):
             for j in range(len(grid[0])):
+                
                 # If we find a land cell ('L'), it means we've found a new island
                 if grid[i][j] == 'L':
                     island_count += 1  # Increment the island count
