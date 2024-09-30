@@ -15,7 +15,6 @@ def decode_message(message: str, pattern: str) -> bool:
         if pattern[i - 1] == '*':
             dp[i][0] = dp[i - 1][0]
     
-    # Fill the dp table based on pattern and message characters
     for i in range(1, pattern_len + 1):
         for j in range(1, message_len + 1):
             # If the current pattern character is '*', it can either:
