@@ -1,13 +1,12 @@
 class Solution:
     
     def explore(self, grid, i, j):
-        
+
         if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == 'W':
             return
 
         grid[i][j] = 'W'
 
-        # Explore the neighboring cells in all four directions (up, down, left, right)
         self.explore(grid, i + 1, j)  # down
         self.explore(grid, i - 1, j)  # up
         self.explore(grid, i, j + 1)  # right
