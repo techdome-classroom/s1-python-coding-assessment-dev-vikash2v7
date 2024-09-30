@@ -20,6 +20,7 @@ def decode_message(message: str, pattern: str) -> bool:
             # If the current pattern character is '*', it can either:
             # - Ignore the current message character and move on (dp[i-1][j])
             # - Match the current message character and continue (dp[i][j-1])
+            
             if pattern[i - 1] == '*':
                 dp[i][j] = dp[i - 1][j] or dp[i][j - 1]
             # If the current pattern character is '?' or matches the message character exactly,
