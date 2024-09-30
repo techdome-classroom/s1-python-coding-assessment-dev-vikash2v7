@@ -1,12 +1,10 @@
 def decode_message(message: str, pattern: str) -> bool:
-        
+
     # Get lengths of the message and the pattern
     message_len = len(message)
     pattern_len = len(pattern)
     
     # Create a 2D table (dp array) initialized with False values
-    # dp[i][j] will be True if the first i characters of the pattern
-    # match the first j characters of the message
     dp = [[False] * (message_len + 1) for _ in range(pattern_len + 1)]
     
     # Base case: an empty pattern matches an empty message
