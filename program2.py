@@ -5,7 +5,6 @@ def decode_message( s: str, p: str) -> bool:
         # Create a 2D dp array with False values
         dp = [[False] * (m + 1) for _ in range(n + 1)]
         
-        # Base case: empty pattern matches empty message
         dp[0][0] = True
         
         # Handle patterns starting with '*' that can match an empty message
