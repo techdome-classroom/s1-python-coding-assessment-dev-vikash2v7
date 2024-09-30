@@ -8,10 +8,10 @@ class Solution:
 
         grid[i][j] = 'W'
 
-        dfs(grid, i + 1, j)  
-        dfs(grid, i - 1, j)  
-        dfs(grid, i, j + 1)  
-        dfs(grid, i, j - 1)  
+        explore(grid, i + 1, j)  
+        explore(grid, i - 1, j)  
+        explore(grid, i, j + 1)  
+        explore(grid, i, j - 1)  
 
 
 
@@ -27,7 +27,7 @@ class Solution:
             for j in range(len(grid[0])):
                 if grid[i][j] == 'L':  # Found an unvisited landmass
                     island_count += 1   # Start a new island
-                    dfs(grid, i, j)     # Visit all parts of the island
+                    explore(grid, i, j)     # Visit all parts of the island
 
         return island_count
                         
