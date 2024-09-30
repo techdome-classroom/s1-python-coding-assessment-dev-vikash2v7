@@ -7,11 +7,13 @@ class Solution:
             return
 
         grid[i][j] = 'W'
-        
+
         dfs(grid, i + 1, j)  
         dfs(grid, i - 1, j)  
         dfs(grid, i, j + 1)  
         dfs(grid, i, j - 1)  
+
+        
 
     def getTotalIsles(self, grid: list[list[str]]) -> int:
 
