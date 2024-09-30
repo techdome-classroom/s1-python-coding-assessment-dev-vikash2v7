@@ -1,7 +1,7 @@
 class Solution:
    
    
-    def dfs(grid, i, j):
+    def explore(grid, i, j):
         
         if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == 'W':
             return
@@ -13,7 +13,7 @@ class Solution:
         dfs(grid, i, j + 1)  
         dfs(grid, i, j - 1)  
 
-        
+
 
     def getTotalIsles(self, grid: list[list[str]]) -> int:
 
